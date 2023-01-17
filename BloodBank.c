@@ -1,10 +1,21 @@
+/* If you don't download my data.txt file then kindly run the code and press 1 for donate boold then it'll auntomatically creat a .txt  file. 
+After running the code kindly give information of 4/5 people.After that you can play with my code like you can see all the donor list. You can search for 
+your desire  blood group and location.  **NOTE :  As we know C language is a case sensatiove language so if you give input your name like (  xyz ) and you
+search your  name like ( XYZ ) then it can't be find . So, remeber this think. I hope you can easyly play with my code.
+
+
+                                                                           HAPPY CODING
+*/
+
+
+
 #include <stdio.h>
 #include <string.h>
 #include<stdlib.h>
-FILE *fptr;
+FILE *fptr; ///this is a global file pointer.
 
 
-typedef struct donarInfo
+typedef struct donarInfo  /// Here I creat a global structure.
 {
     char name[40];
     char birthDay[15];
@@ -19,12 +30,15 @@ typedef struct donarInfo
 
 PERSON people;
 
-void inputInfoOfDonar();///inser
-void viewAllDonar();///view
-void searchForDonar();///search
-void deleteDonar();
-void updateInfoOfDonar();
-void shortAgeBasis();
+void inputInfoOfDonar();  ///This function is for take information of blood donar.
+void viewAllDonar();///This function is for view all the information of all donar.
+void searchForDonar();///This function is searching for a donor. When you'll Press 2 then my program will take you to this function.
+///This function will take 2 inputs from you one is which group of blood you want and where is the location. I mean your desire  blood
+///group and location
+void deleteDonar();/// Suppose you are a donor. You gave your information in this program and now you want to delete your information. If you press 4 my program will take your name 
+///and then if your name exists in my database then your all information will be deleted.
+void updateInfoOfDonar();///I failed to complete update function
+void shortAgeBasis();// and also this one.
 int main()
 {
     int choice;
@@ -36,7 +50,7 @@ int main()
         printf("\t_________\"\"Press 1 for Donate Blood.\"\"_________\n\n");///insert
         printf("\t_________\"\"Press 2 for Request Blood.\"\"_________\n\n");///search
         printf("\t_________\"\"Press 3 for see Donar list.\"\"_________\n\n");///view
-        printf("\t_________\"\"Press 4 for delete your info.\"\"_________\n\n");
+        printf("\t_________\"\"Press 4 for delete your info.\"\"_________\n\n");///delete
         printf("\t_________\"\"Press 5 for update your information( opps sorry this side is under work try later) .\"\"_________\n\n");///update
         printf("\t_________\"\"Press 6 for short Donar list(age basis).\"\"_________\n\n");
         printf("\t_________\"\"Press 0 for Exit.\"\"_________\n\n");
@@ -259,6 +273,11 @@ void shortAgeBasis(){
     }
     fclose(fptr);
 }
+
+
+/// If you have any question about this  project then you can inform me.
+
+//      abuaffan1123@gmail.com 
 
 
 
